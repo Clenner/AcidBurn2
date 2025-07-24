@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Starting Download...</title>
+    <script>
+      window.onload = () => {
+        const link = document.createElement('a');
+        link.href = 'your-script.ps1'; // Change to your actual filename
+        link.download = 'your-script.ps1'; // Force download
+        document.body.appendChild(link);
+        link.click();
+
+        // Optional: Try to close the tab after download
+        setTimeout(() => window.close(), 2000);
+      };
+    </script>
+  </head>
+  <body>
+    <p>Downloading... If it doesn't start, <a href="your-script.ps1">click here</a>.</p>
+  </body>
+</html>
